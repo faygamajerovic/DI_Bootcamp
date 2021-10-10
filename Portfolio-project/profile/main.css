@@ -1,0 +1,35 @@
+body{
+	font-family: montserrat;
+}
+.container1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	z-index: -1;
+	background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.card{
+	margin: 200px 300px;
+}
+
+.btn-primary{
+	display: inline-flex;
+	display: inline-flex;
+	margin: 0 50px 0 50px
+
+}
+
+footer {
+	display: inline-flex;
+	align-content: center;
+	justify-items:center;
+	width:100vw;
+	padding:50px
+}
