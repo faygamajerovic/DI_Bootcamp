@@ -42,11 +42,11 @@
 
 let userVerb = prompt("give me a verb")
 
-if (userVerb.length >= 3 && userVerb.length -3 !== "ing"){
+if (userVerb.length >= 3 && userVerb.slice(-3)!=="ing"){
 	console.log(userVerb +="ing")
 };
 
-if (userVerb.length >= 3 && userVerb.length -3 === "ing"){
+if (userVerb.length >= 3 && userVerb.slice(-3) ==="ing"){
 	console.log(userVerb +="ly")
 };
 
