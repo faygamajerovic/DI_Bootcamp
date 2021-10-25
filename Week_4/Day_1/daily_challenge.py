@@ -11,6 +11,14 @@ else:
 
 print(user_phrase[0] + user_phrase[-1])
 
+current_string = ''
+for char in user_phrase:
+    current_string += char
+    print(current_string)
+
+
+
+
 print(user_phrase[0])
 print(user_phrase[1])
 print(user_phrase[2])
@@ -23,8 +31,10 @@ print(user_phrase[8])
 print(user_phrase[9])
 
 shuff =list(user_phrase) 
+import random
 random.shuffle(shuff)
-result = ''.join(shuff)
-print(shuff)
+print("".join(shuff))
+
+
 
 
