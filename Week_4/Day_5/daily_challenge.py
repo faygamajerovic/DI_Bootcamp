@@ -10,5 +10,13 @@ user_sent = input('write a list of words separated by a comma')
 
 
 
-words = [word for word in user_sent.split(",")]
-print(",".join(sorted(list(set(words)))))
+words = ",".join([word for word in sorted(user_sent.split(","))])
+print(words)
+
+# print(type(words))
+
+
+# user_sent = input('write a list of words separated by a comma')
+
+# words = [word for word in user_sent.split(",")]
+# print(",".join(sorted(list(set(words)))))
