@@ -65,6 +65,6 @@ print(info['company']['employee']['payable'])
 
 info['company']['employee']["birth_date"] =24
 with open('xp.json', 'w') as f:
-    json.dump(info, f)
+    json.dump(info, f, indent=4)
 
 print(info)
