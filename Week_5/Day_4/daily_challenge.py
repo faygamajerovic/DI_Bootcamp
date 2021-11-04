@@ -8,10 +8,42 @@
 import re
 
 class Text():
-    def __init__(self):
-        pass
+    def __init__(self, string):
+        self.content = string
+        self.word_list = self.content.split()
 
-    def wordInText(self):
+    
+    def __wordFrequency(self, word): 
+            if word in self.word_list:
+                return f'the word "{word}" shows up {self.__wordFrequency(word)} times'
+
+# private method so user cant see value
+    def __wordFrequency(self, word): 
+            if word in self.word_list:
+                return self.word_list.count(word)
+
+    # def most_common_word(self):
+    #     word_set = set(self.word_list)
+    #     word_dict = {}
+    #     for word in word_set:
+    #         word_dict.update({word:self.__wordFrequency(word)})
+    #     list_of_tuples = list(word_dict.items())
+    #     return sorted(list_of_tuples, key=lambda x:x[1], reverse=True)[0][0]
+
+    def most_common_word(self):
+        word_set = set(self.word_list)
+        word_dict = list({word:self.__word_frequency(word) for word in word_set}.items())
+        return sorted(word_dict, key=lambda x:x[1], reverse=True)[0][0]
+            
+
+        
+        
+        
+        
+        
+        
+        
+        
         frequency = {}
         document_text = open('theStranger_text.txt', 'r')
         text_string = document_text.read().lower()
@@ -26,4 +58,5 @@ class Text():
         for words in frequency_list:
             print(words, frequency[words])
 
-    wordInText("and")
+    wordInText("and")zxcvASDFGHJKL;'
+    +++'
