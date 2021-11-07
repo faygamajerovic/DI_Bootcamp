@@ -1,0 +1,1 @@
+select f_name from costumers full outer join items on item
