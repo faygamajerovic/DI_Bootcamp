@@ -1,0 +1,24 @@
+-- Database: public
+
+-- DROP DATABASE IF EXISTS public;
+-- SELECT * FROM items ORDER BY price ASC
+-- SELECT * FROM items ORDER BY price desc
+-- SELECT f_name, l_name FROM costumers ORDER BY l_name ASC;
+-- select l_name from costumers order by l_name desc
+
+
+ ALTER TABLE costumers ADD COLUMN id SERIAL PRIMARY KEY;
+
+create table purchases (
+
+    item_id int, foreign key (item) references items,
+    customers_id int primary key ,foreign key(customers) references customer(id)
+)
+
+-- insert into purchases (customer_id, item_id)
+-- values (1,1);
+
+
+-- select f_name, l_name, item from purchases
+-- inner join costumers on purchases.costumer_id = costumers.costumer_id
+-- join items on purchases.item_id = items.item_id;
