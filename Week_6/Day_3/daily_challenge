@@ -1,0 +1,30 @@
+-- Database: day3
+
+-- DROP DATABASE IF EXISTS day3;
+
+--  create table customer(
+--     id_customer int not null primary key ,
+--     first_name varchar(255),
+--     last_name  varchar(255) 
+-- );
+	 
+-- create table customer_profile(
+--     customer_profile_id int not null primary key,
+--     id_customer_fk int not null,
+--     email varchar(255),
+--     foreign key (id_customer_fk) references customer(id_customer)
+-- );
+
+-- insert into customer (id_customer,first_name, last_name) values 
+-- (1,'Fayga','Majeovic'),
+-- (2,'Tee','Shmaya'),
+-- (3,'Adina','Hirsch');
+
+-- insert into customer_profile (customer_profile_id,email,id_customer_fk)
+-- values 
+-- ('1','fake1@fake.not',1),
+-- ('2','fake2@fake.not',2),
+-- ('3','fake3@fake.not',3);
+
+select * from customer inner join customer_profile
+on customer.id_customer = customer_profile.id_customer_fk;
