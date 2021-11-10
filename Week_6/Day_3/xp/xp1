@@ -1,0 +1,33 @@
+-- Database: dvdrental
+
+-- DROP DATABASE IF EXISTS dvdrental;
+-- select name from language
+-- Get a list of all films joined with their languages – select the following details : 
+-- film title, description, and language name. Try your query with different joins:
+-- Get all films, even if they don’t have languages.
+-- Get all languages, even if there are no films in those languages.
+
+-- select title, description, name from language,  film where film.language_id = language.language_id
+-- create table new_film(
+-- id serial primary key,
+-- name varchar (255)
+-- );
+-- insert into new_film (name) values('cloudy with a chance of meatballs'), ('my back is breaking'), ('the lost student');
+-- create table customer_reviews(
+-- review_id serial primary key not null,
+-- film_id int references new_film(id) on delete restrict,
+-- language_id int references language(language_id),
+-- title varchar (255),
+-- score int CHECK (score BETWEEN 1 AND 10),
+-- review_text varchar,
+-- last_update date
+	
+-- );
+
+-- insert into customer_reviews values(
+-- 3,2,6, 'my back is breaking', 2, 'this sucks','2021-09-11'),
+-- -- (1,2,3, 'the lost student', 1, 'this sucks even more wow', '2021-09-11');
+
+-- delete from new_film where name = 'the lost student'
+
+select * from customer_reviews
